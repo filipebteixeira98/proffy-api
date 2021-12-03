@@ -41,9 +41,9 @@ Technologies that I used to develop this application
 - [Node.js](https://nodejs.org/en/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Express](https://expressjs.com/pt-br/)
-- [TypeORM](https://typeorm.io/#/)
-- [JWT-token](https://jwt.io/)
-- [PostgreSQL](https://www.postgresql.org/)
+- [CORS](https://www.npmjs.com/package/cors/)
+- [Knex.js](https://knexjs.org/)
+- [SQLite](https://www.sqlite.org/index.html/)
 
 ## 💻 Getting started
 
@@ -51,9 +51,6 @@ Technologies that I used to develop this application
 
 - [Node.js](https://nodejs.org/en/)
 - [Yarn](https://classic.yarnpkg.com/)
-- One instance of [PostgreSQL](https://www.postgresql.org/)
-
-> Obs.: I recommend use docker
 
 **Clone the project and access the folder**
 
@@ -67,16 +64,13 @@ $ git clone https://github.com/filipebteixeira98/proffy-api.git && cd proffy-api
 # Install dependencies
 $ yarn
 
-# Create the instance of postgreSQL using docker
-docker run --name proffy-postgres -e POSTGRES_USER=docker \
-              -e POSTGRES_DB=proffy -e POSTGRES_PASSWORD=docker \
-              -p 5432:5432 -d postgres
+# Make sure you do not have knexfile.ts misconfigured
 
 # Use the script to run the migrations
-$ yarn typeorm:migration:run
+$ yarn knex:migrate
 
 # To finish, run the api service
-$ yarn dev:server
+$ yarn start
 
 # Well done, project is started!
 ```
