@@ -64,7 +64,8 @@ $ git clone https://github.com/filipebteixeira98/proffy-api.git && cd proffy-api
 # Install dependencies
 $ yarn
 
-# Make sure you do not have knexfile.ts misconfigured
+# Make sure the keys in 'knexfile.ts' to connect with your database
+# are set up correctly.
 
 # Use the script to run the migrations
 $ yarn knex:migrate
@@ -90,7 +91,7 @@ $ gh repo fork filipebteixeira98/proffy-api
 
 ```bash
 # Clone your fork
-$ git clone https://github.com/filipebteixeira98/proffy-api.git && cd proffy-api
+$ git clone your-fork-url && cd proffy-api
 
 # Create a branch with your feature
 $ git checkout -b my-feature
